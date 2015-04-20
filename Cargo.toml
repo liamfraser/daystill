@@ -1,0 +1,7 @@
+[package]
+name = "daystill"
+version = "0.0.1"
+authors = ["Liam Fraser <liam@liamfraser.co.uk>"]
+
+[dependencies]
+time = "*"
