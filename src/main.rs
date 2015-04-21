@@ -41,12 +41,12 @@ fn print_exam(e: &Exam, diff: &Duration) {
 fn main() {
     // TIMES IN UTC
     let exams = [
-        Exam{title: "Linear Algebra", datetime: "19-04-2015 08:00", course: CourseType::CSMATHS},
-        Exam{title: "Real Analysis", datetime: "26-04-2015 08:00", course: CourseType::CSMATHS},
         Exam{title: "EMPR REPORT", datetime: "29-04-2015 11:00", course: CourseType::CS},
         Exam{title: "SYAC OS", datetime: "13-05-2015 17:00", course: CourseType::CS},
         Exam{title: "POPL", datetime: "14-05-2015 17:00", course: CourseType::BOTH},
         Exam{title: "ARIN", datetime: "15-05-2015 08:00", course: CourseType::BOTH},
+        Exam{title: "Linear Algebra", datetime: "19-05-2015 08:00", course: CourseType::CSMATHS},
+        Exam{title: "Real Analysis", datetime: "26-05-2015 08:00", course: CourseType::CSMATHS},
         Exam{title: "COCO", datetime: "26-05-2015 17:00", course: CourseType::BOTH},
         Exam{title: "SYAC DB", datetime: "28-05-2015 12:30", course: CourseType::CS},
     ];
