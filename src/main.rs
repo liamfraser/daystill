@@ -5,6 +5,7 @@ use time::*;
 enum CourseType {
     CS,
     CSMATHS,
+    VANDOOM,
     BOTH
 }
 
@@ -27,8 +28,10 @@ fn mins_to_nice_string(mins_in: i64) -> String {
 fn print_exam(e: &Exam, diff: &Duration) {
     print!("{}", e.title);
 
-    if e.course == CourseType::CSMATHS {
-        print!(" (lol CS-Maths)");
+    match e.course {
+        CourseType::CSMATHS => { print!(" (lol CS-Maths)"); },
+        CourseType::VANDOOM => { print!(" (Van Doom!)"); },
+        _ => {}
     }
 
     if diff.num_minutes() < 0 {
@@ -48,6 +51,7 @@ fn main() {
         Exam{title: "Linear Algebra", datetime: "19-05-2015 08:00", course: CourseType::CSMATHS},
         Exam{title: "Real Analysis", datetime: "26-05-2015 08:00", course: CourseType::CSMATHS},
         Exam{title: "COCO", datetime: "26-05-2015 17:00", course: CourseType::BOTH},
+        Exam{title: "Groups, Rings & Fields", datetime: "28-05-2015 08:00", course: CourseType::VANDOOM},
         Exam{title: "SYAC DB", datetime: "28-05-2015 12:30", course: CourseType::CS},
     ];
 
